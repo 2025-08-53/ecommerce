@@ -1,4 +1,4 @@
-BEGIN TRANSACTION;
+START TRANSACTION;
 
 -- Passo 1: Inserir um novo pedido
 INSERT INTO pedidos (id, cliente_id, data_pedido, status, total)
@@ -16,7 +16,7 @@ WHERE id = 1;
 -- Confirma todas as alterações
 COMMIT;
 
-BEGIN TRANSACTION;
+START TRANSACTION;
 
 -- Passo 1: Atualizar o status do pedido para 'Cancelado'
 UPDATE pedidos
@@ -32,7 +32,7 @@ WHERE id = 1;
 COMMIT;
 
 
-BEGIN TRANSACTION;
+START TRANSACTION;
 
 -- Passo 1: Atualizar o preço dos produtos da categoria 1
 UPDATE produtos
